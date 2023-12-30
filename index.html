@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDB</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://kit.fontawesome.com/e918d10e90.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <script src="helpers.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="appTitle">🍿Film Finder🍿</h1>
+    </header>
+    <form id="genreForm">
+        <label for="genre">Choose a genre:</label>
+        <select name="genre" id="genre"></select>
+    </form>
+    <button id="playBtn">Let's go!</button>
+    <div id="movieInfo">
+        <div id="moviePoster"></div>
+        <div id="movieText"></div>
+    </div>
+    <div id="likeOrDislikeBtns" hidden>
+        <button id="likeBtn"><i class="fa-solid fa-thumbs-up"></i></button>
+        <button id="dislikeBtn"><i class="fa-solid fa-thumbs-down"></i></button>
+    </div>
+</body>
+</html>
