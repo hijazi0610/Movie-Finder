@@ -6,8 +6,8 @@
     <title>TMDB</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://kit.fontawesome.com/e918d10e90.js" crossorigin="anonymous"></script>
-    <script src="main.js" defer></script>
-    <script src="helpers.js" defer></script>
+    <script src="main.js" type="module" defer></script>
+    <script src="helpers.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -18,7 +18,7 @@
         <select name="genre" id="genre"></select>
     </form>
     <button id="playBtn">Let's go!</button>
-    <div id="movieInfo">
+    <div id="movieInfo" hidden>
         <div id="moviePoster"></div>
         <div id="movieText"></div>
     </div>

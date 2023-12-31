@@ -16,13 +16,14 @@ h1 {
 
 #genre {
     width: 10rem;
-    height: 20px;
+    height: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #playBtn {
-    width: 7rem;
+    width: 10rem;
     height: 30px;
     border-radius: 20px;
     border-style: none;
@@ -31,7 +32,23 @@ h1 {
 }
 
 #movieInfo {
-    margin-top: 500px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#moviePoster {
+    height: 400px;
+}
+
+/* #movieOverview {
+    margin-left: 100px;
+} */
+
+#movieOverview, #movieTitle {
+    margin-left: 100px;
+    width: 700px;
 }
 
 .fa-solid {

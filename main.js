@@ -1,3 +1,5 @@
+import { populateGenreDropdown, getSelectedGenre, clearCurrentMovie, getRandomMovie, displayMovie } from "./helpers.js";
+
 const tmdbKey = 'dd3017ce8a3f6ea82d17105d3e9025c9';
 const baseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
@@ -44,7 +46,7 @@ const getMovieInfo = async (movie) => {
     const urlToFetch = `${baseUrl}${movieEndpoint}${requestParams}`;
 
     try {
-        const resposne = await fetch(urlToFetch);
+        const response = await fetch(urlToFetch);
         if (response.ok) {
             const jsonResponse = await response.json();
             const movieInfo = jsonResponse;
@@ -64,7 +66,14 @@ const showRandomMovie = async () => {
     const randomMovie = getRandomMovie(movies);
     const info = await getMovieInfo(randomMovie);
     displayMovie(info);
+
+    movieInfo.removeAttribute('hidden');
+
 }
 
-getGenres.then(populateGenreDropdown);
-playBtn.onclick(showRandomMovie);
+getGenres().then(populateGenreDropdown);
+playBtn.addEventListener('click', showRandomMovie);
+
+export { showRandomMovie }
+
+console.log(showRandomMovie())
